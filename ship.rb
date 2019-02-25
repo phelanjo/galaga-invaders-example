@@ -33,6 +33,12 @@ class Ship
     "✈️ (#{location})"
   end
 
+  def fire_missile
+    missile = Missile.new(muzzle_location)
+    missile.launch(-10)
+    add(missile)
+  end
+
   private
 
   def move(delta)

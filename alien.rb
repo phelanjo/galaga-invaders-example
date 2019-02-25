@@ -26,6 +26,16 @@ class Alien
     location.y + half_height
   end
 
+  def muzzle_location
+    Vector.new(location.x, bottom_edge)
+  end
+
+  def fire_missile(alien)
+    missile = Missile.new(muzzle_location)
+    missile.launch(10)
+    add(missile)
+  end
+
   private
 
   def half_height

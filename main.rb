@@ -57,8 +57,20 @@ GalagaInvaders.new.show
 Reflecting on Principle
 -----------------------
 1. What is "duck typing" and what does it have to do with polymorphism?
+    Duck types are public interfaces that are not tied to any specific class. If
+    an object quacks like a duck and walks like a duck, then it's a duck.
+    Polymorphism refers to the ability of many different objects to respond to
+    the same message. By not having associated types, many different objects
+    can respond to the same message.
+
 2. What are some common code smells that indicate the need for relying on a
    "duck type" rather than a concrete class?
+    - Case Statements that switch on class
+    - kind_of? ad is_a?
+    - responds_to?
+
 3. True or False: Abstractions like duck typing make code explicitly easier to
    understand, vs. using concrete types.
+    False. Abstractions are harder to understand, but once understood, are easier
+    to change.
 =end
