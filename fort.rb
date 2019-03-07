@@ -1,7 +1,6 @@
 class Fort < Structure
 
-  def initialize(args)
-    super
+  def post_initialize(args)
     @sprite = args.fetch[:sprite]
   end
 
